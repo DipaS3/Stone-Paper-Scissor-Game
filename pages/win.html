@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Win</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../pages/style1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="topSection">
+        <div class="heading">
+          <p>ROCK</p>
+          <p>PAPER</p>
+          <p>SCISSORS</p>
+        </div>
+        <div class="scores">
+          <div class="score" id="computer-score">
+            <p>COMPUTER</p>
+            <p>SCORE</p>
+            <h1 class="comp-score"></h1>
+          </div>
+          <div class="score" id="your-score">
+            <p>YOUR</p>
+            <p>SCORE</p>
+            <h1 class="user-score"></h1>
+          </div>
+        </div>
+      </div>
+      <!-- Middle Section Start -->
+      <div class="winning-head">
+        <div class="urwin">YOU WIN</div>
+        <div class="pc">AGAINST PC</div>
+        <a href="../index.html">
+          <button class="play-again">PLAY AGAIN</button></a
+        >
+      </div>
+
+      <img class="ellip3-left elp" src="../img/Ellipse 3.png" alt="ellipse" />
+      <img class="ellip4-left elp" src="../img/Ellipse 4.png" alt="ellipse" />
+      <img class="ellip5-left elp" src="../img/Ellipse 5.png" alt="ellipse" />
+
+      <div class="picked">
+        <h3 class="urPicked">YOU PICKED</h3>
+        <div class="left-img circle">
+          <img class="user-win-img" src="" alt="rock-img" />
+        </div>
+
+        <h3 class="pcPicked">PC PICKED</h3>
+        <div class="right-img circle">
+          <img class="computer-win-img" src="" alt="rock-img" />
+        </div>
+      </div>
+
+      <button class="nxt-btn"><a href="./next.html">NEXT</a></button>
+
+      <!-- Rules Section  -->
+      <button class="rule-btn rules-btn rule-btn-won">RULES</button>
+      <div class="game-rules" style="visibility: hidden">
+        <h1>Game Rules</h1>
+        <div class="rules">
+          <ul class="rules-list">
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <button
+      class="close-btn cross-btn"
+      style="visibility: hidden; top: 43%; right: -1%"
+    >
+      X
+    </button>
+    <script src="../js/script.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const userWinimg = document.querySelector(".user-win-img");
+        const compWinimg = document.querySelector(".computer-win-img");
+        const userChoice = localStorage.getItem("userChoice");
+        const computerChoice = localStorage.getItem("computerChoice");
+
+        userWinimg.src = `../img/${userChoice}.png`;
+        compWinimg.src = `../img/${computerChoice}.png`;
+
+        const leftImg = document.querySelector(".left-img");
+        const rightImg = document.querySelector(".right-img");
+
+        leftImg.classList.add(`${userChoice}1`);
+        rightImg.classList.add(`${computerChoice}1`);
+
+        // Clear the choices from localStorage
+        localStorage.removeItem("userChoice");
+        localStorage.removeItem("computerChoice");
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="topSection">
+        <div class="heading">
+          <p>ROCK</p>
+          <p>PAPER</p>
+          <p>SCISSORS</p>
+        </div>
+        <div class="scores">
+          <div class="score" id="computer-score">
+            <p>COMPUTER</p>
+            <p>SCORE</p>
+            <h1 class="comp-score"></h1>
+          </div>
+          <div class="score" id="your-score">
+            <p>YOUR</p>
+            <p>SCORE</p>
+            <h1 class="user-score"></h1>
+          </div>
+        </div>
+      </div>
+      <!-- Middle Section Start -->
+      <div class="gameSection">
+        <button class="rock bar" id="rock">
+          <img src="./img/rock.png" alt="" srcset="" />
+        </button>
+        <button class="paper bar" id="paper">
+          <img src="./img/paper.png" alt="" srcset="" />
+        </button>
+        <button class="scissor bar" id="scissor">
+          <img src="./img/scissor.png" alt="" srcset="" />
+        </button>
+
+        <div class="line1 line"></div>
+        <div class="line2 line"></div>
+        <div class="line3 line"></div>
+      </div>
+      <!-- Rules Section  -->
+      <button class="rule-btn">RULES</button>
+      <div class="game-rules">
+        <h1>Game Rules</h1>
+        <div class="rules">
+          <ul class="rules-list">
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <button class="close-btn cross-btn">X</button>
+  </body>
+  <script src="./js/script.js"></script>
+</html>

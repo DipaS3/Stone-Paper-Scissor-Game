@@ -1,0 +1,225 @@
+.winning-head {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 210px;
+}
+
+.urwin {
+  font-size: 3vw;
+  color: white;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.pc {
+  font-size: 1.5vw;
+  color: white;
+  font-weight: 400;
+  line-height: 3rem;
+}
+.play-again {
+  border: 2px solid white;
+  cursor: pointer;
+  background-color: white;
+  border-radius: 1vw;
+  padding: 10px;
+  width: 150px;
+}
+.left-img {
+  position: absolute;
+  top: 47%;
+  left: 26%;
+  z-index: 10;
+}
+.right-img {
+  position: absolute;
+  top: 47%;
+  left: 66%;
+  z-index: 10;
+}
+.rule-btn-won {
+  right: 10%;
+}
+.nxt-btn {
+  border-radius: 10px;
+  border: 2px solid white;
+  position: absolute;
+  top: 79%;
+  right: 3%;
+  padding: 1rem;
+  background-color: transparent;
+  color: white;
+  font-size: 1.2vw;
+  text-decoration: none;
+}
+.circle {
+  height: 130px;
+  width: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: white;
+}
+.ellip3-left {
+  position: absolute;
+  top: 37%;
+  right: 58%;
+}
+.ellip4-left {
+  position: absolute;
+  top: 28%;
+  right: 52%;
+}
+.ellip5-left {
+  position: absolute;
+  width: 15%;
+  top: 42.5%;
+  left: 23%;
+  z-index: 5;
+  opacity: 50%;
+}
+
+.ellip3-right {
+  position: absolute;
+  top: 37%;
+  left: 62%;
+}
+.ellip4-right {
+  position: absolute;
+  top: 28%;
+  left: 55%;
+}
+.ellip5-right {
+  position: absolute;
+  width: 15%;
+  top: 42.5%;
+  left: 64%;
+  z-index: 5;
+  opacity: 50%;
+}
+a {
+  text-decoration: none;
+  color: white;
+}
+.picked {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 30%;
+  margin-top: -260px;
+}
+.urPicked {
+  color: white;
+}
+.pcPicked {
+  color: white;
+}
+.cross-btn {
+  top: 28%;
+  right: 0%;
+}
+.rock1 {
+  border: 0.6vw solid #0074b6;
+}
+
+.paper1 {
+  border: 0.6vw solid #ffa943;
+}
+
+.scissor1 {
+  border: 0.6vw solid #bd00ff;
+}
+.replay {
+  margin-top: 20%;
+}
+.next-main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 15%;
+  line-height: 3rem;
+}
+.next-h1 {
+  color: white;
+  letter-spacing: 0.5vw;
+}
+.next-h2 {
+  color: white;
+}
+@keyframes animationstar {
+  0% {
+    transform: translate(0, 0) rotate(0deg);
+    opacity: 1;
+  }
+  25% {
+    transform: translate(30px, -100px) rotate(45deg);
+    opacity: 0.8;
+  }
+  50% {
+    transform: translate(-50px, -100px) rotate(45deg);
+    opacity: 0.8;
+  }
+}
+.star {
+  position: absolute;
+  animation: animationstar 2s ease-in-out infinite;
+}
+.star1 {
+  top: 30%;
+  left: 35%;
+  animation-delay: 0s;
+}
+.star2 {
+  top: 15%;
+  right: 41%;
+  animation-delay: 0.2s;
+}
+.star3 {
+  top: 20%;
+  left: 45%;
+  animation-delay: 0.3s;
+}
+.star4 {
+  top: 25%;
+  right: 60%;
+  animation-delay: 0.5s;
+}
+.star5 {
+  top: 20%;
+  right: 45%;
+  animation-delay: 0.7s;
+}
+.star6 {
+  top: 30%;
+  right: 41%;
+  animation-delay: 0.8s;
+}
+.star7 {
+  top: 35%;
+  right: 40%;
+  animation-delay: 1s;
+}
+/* Responsive */
+@media (max-width: 800px) {
+    .circle {
+      height: 110px;
+      width: 110px;
+    }
+    .elp{
+        visibility: hidden;
+    }
+  
+    .left-img{
+        left: 40%;
+        right: 50%;
+        top:50%;
+    }
+    .right-img {
+      left: 40%;
+      right: 50%;
+      top:65%;
+    }
+  }

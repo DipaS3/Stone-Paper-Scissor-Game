@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Winner</title>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../pages/style1.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="next-main">
+        <img class="trophy" src="../img/Trophy.png" alt="trophy" />
+        <h1 class="next-h1">HURRAY!!</h1>
+        <h2 class="next-h2">YOU WON THE GAME</h2>
+        <a href="../index.html"
+          ><button class="play-again">PLAY AGAIN</button></a
+        >
+      </div>
+
+      <img src="../img/Star 7.png" alt="star" class="star star1" />
+      <img src="../img/Star 7.png" alt="star" class="star star2" />
+      <img src="../img/Star 7.png" alt="star" class="star star3" />
+      <img src="../img/Star 7.png" alt="star" class="star star4" />
+      <img src="../img/Star 7.png" alt="star" class="star star5" />
+      <img src="../img/Star 7.png" alt="star" class="star star6" />
+      <img src="../img/Star 7.png" alt="star" class="star star7" />
+
+      <!-- Rules Section  -->
+      <button
+        class="rule-btn rules-btn rule-btn-won"
+        style="top: 80%; right: 2%"
+      >
+        RULES
+      </button>
+      <div class="game-rules" style="visibility: hidden">
+        <h1>Game Rules</h1>
+        <div class="rules">
+          <ul class="rules-list">
+            <li>
+              Rock beats scissors, scissors beat paper, and paper beats rock.
+            </li>
+            <li>
+              Agree ahead of time whether you’ll count off “rock, paper,
+              scissors, shoot” or just “rock, paper, scissors.”
+            </li>
+            <li>
+              Use rock, paper, scissors to settle minor decisions or simply play
+              to pass the time
+            </li>
+            <li>
+              If both players lay down the same hand, each player lays down
+              another hand
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button class="close-btn cross-btn" style="visibility: hidden">X</button>
+    </div>
+
+    <script>
+      const cancleBtn = document.querySelector(".close-btn");
+      const rulesBtn = document.querySelector(".rule-btn");
+      const gameRules = document.querySelector(".game-rules");
+
+      cancleBtn.addEventListener("click", () => {
+        cancleBtn.style.visibility = "hidden";
+        gameRules.style.visibility = "hidden";
+      });
+      rulesBtn.addEventListener("click", () => {
+        cancleBtn.style.visibility = "visible";
+        gameRules.style.visibility = "visible";
+      });
+    </script>
+  </body>
+</html>

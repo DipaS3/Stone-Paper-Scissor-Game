@@ -1,0 +1,267 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  height: 150vh;
+  width: 100vw;
+  font-family: "ROBOTO";
+  background: #8cc461;
+  padding-top: 4%;
+  position: relative;
+}
+.topSection {
+  display: flex;
+  justify-content: space-between;
+  width: 60%;
+  padding: 1%;
+  border: 2px solid #ffffff;
+  border-radius: 20px;
+  margin: auto;
+}
+.heading p {
+  color: #ffffff;
+  font-size: 3vw;
+}
+
+.scores {
+  width: 50%;
+  display: flex;
+  justify-content: flex-end;
+  gap: 5%;
+}
+.score {
+  background-color: white;
+  padding: 23px 30px;
+  width: 38%;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 700;
+  
+}
+
+.score p {
+  font-weight: 500;
+  font-size: 1.2vw;
+  color: #656565;
+}
+.score h1 {
+  font-size: 3vw;
+}
+
+.gameSection {
+  display: flex;
+  width: 40%;
+  margin-top: 5%;
+  position: relative;
+  min-width: 450px;
+  margin: 22px auto;
+  height: 70%;
+ 
+}
+.gameSection img {
+  height: 70%;
+  width: 60%;
+}
+.bar {
+  background-color: white;
+  height: 8vw;
+  width: 8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 6;
+}
+#rock {
+  border: 0.6vw solid #0074b6;
+  position: absolute;
+  top: 7%;
+  left: 8%;
+}
+#paper {
+  border: 0.6vw solid #ffa943;
+  position: absolute;
+  top: 57%;
+  left: 48%;
+  margin-top: -10%;
+  margin-left: -11%;
+}
+#scissor {
+  border: 0.6vw solid #bd00ff;
+  position: absolute;
+  top: 7%;
+  left: 59%;
+}
+#scissor img {
+  width: 50%;
+}
+
+.line1 {
+   position: absolute;
+  border: 10px solid #000000;
+  z-index: 0;
+  height: 220px;
+  opacity: 69%;
+  top: -2%;
+  left:40%;
+  transform: rotate(90deg);
+}
+.line2 {
+  position: absolute;
+  border: 10px solid #000000;
+  z-index: 0;
+  top:11%;
+  left:27%;
+  height: 290px;
+  opacity: 69%;
+  transform: rotate(149deg);
+}
+.line3 {
+  position: absolute;
+  border: 10px solid #000000;
+  z-index: 0;
+  top: 20%;
+  right: 40%;
+  height: 240px;
+  opacity: 69%;
+  transform: rotate(25deg);
+}
+.game-rules{
+    border:0.7vw solid white;;
+    background-color: #004429;
+    position: absolute;
+    right: 1%;
+    width:23%;
+    top:30%;
+    padding:1.2vw;
+    border-radius: 25px;
+    
+}
+.game-rules h1{
+    color: white;
+    text-align: center;
+    font-size: 2vw;
+    
+}
+.rules{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:30%;
+    margin: 5% auto;
+   
+}
+.rules-list{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 0.7vw;
+    font-size: 1.2vw;
+    height: 50%;
+    color: white;
+    list-style-type: square;
+    padding: 1vw;
+}
+li::marker{
+    color: yellow;
+}
+
+.rule-btn{
+    border-radius: 10px;
+    border: 2px solid white;
+    position: absolute;
+    top: 79%;
+    right: 3%;
+    padding:1rem;
+    background-color: transparent;
+    color: white;
+    font-size: 1.2vw;
+    text-decoration: none;
+}
+button:hover{
+    cursor: pointer;
+    
+}
+.close-btn{
+    color: white;
+    background-color: red;
+    right:-1%;
+    position: absolute;
+    font-weight: 300;
+    border: 1px solid white;
+    border-radius: 60%;
+    top: 44%;
+    font-size: 2vw;
+    width:2.5vw;
+}
+/* Responsive */
+@media (max-width: 768px) {
+  .container {
+    padding-top: 2%;
+    height: auto;
+  }
+
+  .topSection {
+    flex-direction: column;
+    width: 80%;
+  }
+
+  .scores {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .gameSection {
+    width: 80%;
+    margin: 20px auto;
+  }
+
+  .game-rules {
+    width: 80%;
+    right: auto;
+    top: 70%;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .rule-btn {
+    top: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+  }
+
+  .close-btn {
+    top: auto;
+    bottom: 10%;
+    right: 10%;
+    left: auto;
+  }
+  
+}
+@media (max-width: 1250px){
+  .line1{
+    visibility: hidden;
+}
+
+.line2{
+    visibility: hidden;
+}
+
+.line3{
+    visibility: hidden;
+}
+.rule-btn {
+    top: auto;
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 5%;
+  }
+
+}
